@@ -4,9 +4,25 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+const shoppingList = "groceries";
+const cake = () => {
+  const dairy = "milk";
+  console.log(`${shoppingList} ${dairy}`);
+};
+
+cake();
+console.log(shoppingList);
+
+// function init() {
+//   var name = "Mozilla"; // name is a local variable created by init
+//   function displayName() { // displayName() is the inner function, a closure
+//       alert (name); // displayName() uses variable declared in the parent function
+//   }
+//   displayName();
+// }
+// init();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
@@ -17,6 +33,7 @@ const counterMaker = () => {
   //      "closes over" the `count` variable. It can "see" it in the parent scope!
   // 3- Return the `counter` function.
 };
+
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
 // myCounter(); // 2
